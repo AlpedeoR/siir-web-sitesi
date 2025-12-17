@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Mürekkep ve Ruh - Geliştirici Kitapçığı</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Roboto+Mono&display=swap');
+
+        body {
+            font-family: 'Lora', serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            background: #fdfbf7;
+        }
+
+        h1, h2, h3 {
+            color: #2c3e50;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px;
+        }
+
+        h1 { text-align: center; margin-top: 50px; font-size: 3em; border: none; }
+        .subtitle { text-align: center; font-style: italic; color: #7f8c8d; margin-bottom: 100px; }
+        
+        pre {
+            background: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 5px solid #2980b9;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.9em;
+            overflow-x: auto;
+            white-space: pre-wrap; /* Uzun kodların satır atlaması için */
+        }
+
+        code {
+            font-family: 'Roboto Mono', monospace;
+            background: #eee;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+
+        .note {
+            background-color: #fff8e1;
+            border-left: 5px solid #f1c40f;
+            padding: 15px;
+            margin: 20px 0;
+        }
+
+        .page-break {
+            page-break-before: always;
+            margin-top: 50px;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.8em;
+            color: #aaa;
+            margin-top: 50px;
+            border-top: 1px solid #ddd;
+            padding-top: 20px;
+        }
+
+        @media print {
+            body { background: white; margin: 0; padding: 20px; max-width: 100%; }
+            .page-break { page-break-before: always; }
+            pre { break-inside: avoid; border: 1px solid #ccc; }
+            a { text-decoration: none; color: #000; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Mürekkep ve Ruh</h1>
+    <p class="subtitle">HTML, CSS ve JavaScript ile Şiir Blogu Geliştirme Rehberi</p>
+    
+    <div style="text-align: center; margin-top: 100px;">
+        <p><strong>Hazırlayan:</strong> Gemini & Senin İşbirliğin</p>
+        <p><strong>Tarih:</strong> 2024</p>
+    </div>
+
+    <div class="page-break"></div>
+
+    <h2>İçindekiler</h2>
+    <ul>
+        <li>Bölüm 1: Proje Kaynak Kodları (HTML, CSS, JS)</li>
+        <li>Bölüm 2: Tasarım Mantığı (HTML & CSS)</li>
+        <li>Bölüm 3: Etkileşim ve Canlılık (JavaScript)</li>
+        <li>Bölüm 4: Gelecek Adımlar</li>
+    </ul>
+
+    <div class="page-break"></div>
+
+    <h2>Bölüm 1: Proje Kaynak Kodları</h2>
+    <p>Bu bölümde projenin çalışan son halinin kodları bulunmaktadır. Bu kodları ilgili dosyalara kopyalayarak projeyi çalıştırabilirsiniz.</p>
+
+    <h3>1. HTML (index.html)</h3>
+    <pre>&lt;!DOCTYPE html&gt;
+&lt;html lang="tr"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Mürekkep ve Ruh - Şiir Blogu&lt;/title&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+    &lt;link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;header class="main-header"&gt;
+        &lt;h1&gt;Mürekkep ve Ruh&lt;/h1&gt;
+        &lt;p&gt;Kelimelerin dans ettiği yer.&lt;/p&gt;
+    &lt;/header&gt;
+
+    &lt;main class="container"&gt;
+        &lt;!-- Birinci Şiir --&gt;
+        &lt;article class="poem-card"&gt;
+            &lt;h2&gt;Sessiz Gemi&lt;/h2&gt;
+            &lt;div class="meta"&gt;Yahya Kemal Beyatlı&lt;/div&gt;
+            &lt;div class="poem-body collapsed"&gt;
+                &lt;p&gt;
+                    Artık demir almak günü gelmişse zamandan,&lt;br&gt;
+                    Meçhule giden bir gemi kalkar bu limandan.&lt;br&gt;&lt;br&gt;
+                    Hiç yolcusu yokmuş gibi sessizce alır yol;&lt;br&gt;
+                    Sallanmaz o kalkışta ne mendil ne de bir kol.
+                    &lt;!-- Şiirin devamı buraya... --&gt;
+                &lt;/p&gt;
+            &lt;/div&gt;
+            &lt;button class="read-more"&gt;Devamını Oku&lt;/button&gt;
+        &lt;/article&gt;
+    &lt;/main&gt;
+
+    &lt;footer&gt;
+        &lt;p&gt;&copy; 2024 Mürekkep ve Ruh.&lt;/p&gt;
+    &lt;/footer&gt;
+
+    &lt;script src="script.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+
+    <div class="page-break"></div>
+
+    <h3>2. CSS (style.css)</h3>
+    <pre>:root {
+    --bg-color: #fdfbf7;
+    --text-color: #2c3e50;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Lora', serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-body);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.poem-card {
+    background-color: #fff;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.poem-body {
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    position: relative;
+}
+
+.poem-body.collapsed {
+    max-height: 100px;
+}
+
+.poem-body.collapsed::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(transparent, #fff);
+}
+
+.poem-body.expanded {
+    max-height: 1000px;
+}
+
+.read-more {
+    background-color: transparent;
+    border: 1px solid var(--text-color);
+    padding: 0.5rem 1.2rem;
+    cursor: pointer;
+    font-family: var(--font-body);
+}</pre>
+
+    <h3>3. JavaScript (script.js)</h3>
+    <pre>const buttons = document.querySelectorAll('.read-more');
+
+buttons.forEach(button => {
+    button.addEventListener('click', function() {
+        const card = button.parentElement;
+        const poemBody = card.querySelector('.poem-body');
+
+        poemBody.classList.toggle('collapsed');
+        poemBody.classList.toggle('expanded');
+
+        if (poemBody.classList.contains('expanded')) {
+            button.textContent = "Kapat";
+        } else {
+            button.textContent = "Devamını Oku";
+        }
+    });
+});</pre>
+
+    <div class="page-break"></div>
+
+    <h2>Bölüm 2: Tasarım Mantığı (HTML & CSS)</h2>
+    
+    <h3>Hazırlık Aşaması</h3>
+    <p>Kod yazmaya başlamadan önce <strong>"Bu site ne hissettirmeli?"</strong> sorusunu sorduk.</p>
+    <ul>
+        <li><strong>Tema:</strong> Şiir, duygusal ve minimaldir.</li>
+        <li><strong>Renk Paleti:</strong> Gözü yormayan "krem rengi" arka plan (<code>#fdfbf7</code>) ve koyu gri metinler.</li>
+        <li><strong>Tipografi:</strong> Tırnaklı (Serif) fontlar (Lora ve Playfair Display) edebiyat hissi verir.</li>
+    </ul>
+
+    <h3>HTML: İskelet</h3>
+    <p>Google ve tarayıcıların siteyi daha iyi anlaması için "anlamlı" (semantik) etiketler kullandık:</p>
+    <ul>
+        <li><code>&lt;header&gt;</code>: Başlık alanı.</li>
+        <li><code>&lt;article&gt;</code>: Her bir şiir kartı.</li>
+        <li><code>&lt;footer&gt;</code>: Alt bilgi.</li>
+    </ul>
+
+    <h3>CSS: Görünüm ve Kutu Modeli</h3>
+    <p class="note"><strong>Kutu Modeli (Box Model):</strong> Her HTML elemanı bir kutudur. <strong>Margin</strong> dış boşluk, <strong>Padding</strong> iç boşluktur.</p>
+    <p><strong>Değişkenler (`:root`):</strong> Renkleri en başta tanımladık. Böylece temayı değiştirmek istediğimizde tek bir yeri değiştirmemiz yeterli oldu.</p>
+
+    <div class="page-break"></div>
+
+    <h2>Bölüm 3: Etkileşim ve Canlılık (JavaScript)</h2>
+
+    <h3>DOM Manipülasyonu</h3>
+    <p>JavaScript, HTML etiketlerini birer "Nesne" olarak görür. <code>document.querySelectorAll</code> ile sayfadaki tüm butonları bulup seçtik.</p>
+
+    <h3>Olay Dinleyicileri (Event Listeners)</h3>
+    <p><code>addEventListener('click', ...)</code> kodu ile butona şu emri verdik: <em>"Burada bekle ve biri sana tıkladığında çalış."</em></p>
+
+    <h3>Neden CSS Sınıfı (Class) Değiştiriyoruz?</h3>
+    <p>JavaScript içinde <code>style.height = '500px'</code> yazmak yerine, sadece <code>collapsed</code> veya <code>expanded</code> sınıflarını ekleyip çıkardık.</p>
+    <p><strong>Neden?</strong> JavaScript "davranışı", CSS "görünümü" yönetir. İşleri ayırmak kodun temiz kalmasını sağlar.</p>
+
+    <h3>Algoritma Mantığı</h3>
+    <ol>
+        <li>Kullanıcı butona tıklar.</li>
+        <li>Program, butonun ait olduğu şiir kartını bulur (<code>parentElement</code>).</li>
+        <li>Şiir kapalıysa açar (sınıf ekler), açıksa kapatır (sınıf siler).</li>
+        <li>Buton üzerindeki yazıyı ("Devamını Oku" / "Kapat") günceller.</li>
+    </ol>
+
+    <div class="page-break"></div>
+
+    <h2>Bölüm 4: Gelecek Adımlar</h2>
+    <p>Bu projeyi daha da geliştirmek için yapabileceğin egzersizler:</p>
+    <ul>
+        <li><strong>Responsive Tasarım:</strong> Telefonda yazı boyutlarını <code>@media</code> sorguları ile küçültmek.</li>
+        <li><strong>Karanlık Mod:</strong> Bir buton ile arka planı siyah, yazıları beyaz yapmak.</li>
+        <li><strong>Yayınlama:</strong> GitHub Pages kullanarak siteni dünyaya açmak.</li>
+    </ul>
+
+    <footer>
+        <p>Bu kitapçık eğitim amaçlı oluşturulmuştur. İyi kodlamalar!</p>
+    </footer>
+
+</body>
+</html>

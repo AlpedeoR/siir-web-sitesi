@@ -1,0 +1,77 @@
+/* (Önceki temel ayarlar aynı kalıyor, sadece poem-body kısmını değiştiriyoruz) */
+:root {
+    --bg-color: #fdfbf7;
+    --text-color: #2c3e50;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Lora', serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-body);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.main-header { text-align: center; padding: 3rem 1rem; border-bottom: 1px solid #e0e0e0; margin-bottom: 2rem; }
+.main-header h1 { font-family: var(--font-heading); font-size: 3rem; margin: 0; }
+.main-header p { font-style: italic; color: #7f8c8d; }
+
+.container { max-width: 800px; margin: 0 auto; padding: 0 1rem; }
+
+.poem-card {
+    background-color: #fff;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.poem-card h2 { font-family: var(--font-heading); margin-top: 0; }
+.meta { color: #95a5a6; font-size: 0.9rem; margin-bottom: 1rem; text-transform: uppercase; }
+
+/* --- YENİ EKLENEN KISIMLAR --- */
+
+.poem-body {
+    font-size: 1.1rem;
+    overflow: hidden; /* Taşanı gizle */
+    transition: max-height 0.5s ease; /* Açılma animasyonu */
+    position: relative;
+}
+
+/* Kapalı Durum (JavaScript ile kontrol edilecek) */
+.poem-body.collapsed {
+    max-height: 100px; /* Sadece ilk birkaç satır görünsün */
+}
+
+/* Kapalı durumdayken yazının ucunu silikleştirme efekti */
+.poem-body.collapsed::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(transparent, #fff); /* Şeffaftan beyaza geçiş */
+}
+
+/* Açık Durum */
+.poem-body.expanded {
+    max-height: 1000px; /* Yeterince büyük bir değer */
+}
+
+.read-more {
+    background-color: transparent;
+    border: 1px solid var(--text-color);
+    padding: 0.5rem 1.2rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-family: var(--font-body);
+    transition: all 0.3s;
+}
+
+.read-more:hover {
+    background-color: var(--text-color);
+    color: white;
+}
